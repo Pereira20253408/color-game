@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ColorMixKids - Juego Educativo 🎨</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome para íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Pestañas -->
+    <div class="tabs">
+      <button class="tab-button active" data-tab="game">Juego de Mezcla</button>
+      <button class="tab-button" data-tab="learn">Aprender Colores</button>
+    </div>
+
+    <!-- Contenido de la pestaña "Juego de Mezcla" -->
+    <div id="game" class="tab-content active">
+      <h1 class="titulo">🎨 ColorMixKids 🎨</h1>
+      <p class="instrucciones">Escoge 2 colores y verás la magia ✨</p>
+
+      <!-- Esferas de colores -->
+      <div class="color-circles">
+        <div class="circle amarillo" data-color="amarillo">Amarillo</div>
+        <div class="circle azul" data-color="azul">Azul</div>
+        <div class="circle rojo" data-color="rojo">Rojo</div>
+        <div class="circle verde" data-color="verde">Verde</div>
+        <div class="circle blanco" data-color="blanco">Blanco</div>
+      </div>
+
+      <!-- Botón de mezclar -->
+      <button id="mezclar-btn" class="boton-mezclar">✨ MEZCLAR ✨</button>
+
+      <!-- Resultado de la mezcla -->
+      <div class="result">
+        <h2>Resultado:</h2>
+        <div id="resultado-color" class="resultado-circle"></div>
+        <p id="resultado-nombre">Nombre del color: </p>
+      </div>
+    </div>
+
+    <!-- Contenido de la pestaña "Aprender Colores" -->
+    <div id="learn" class="tab-content">
+      <h1 class="titulo">🎨 Aprende los Colores 🎨</h1>
+      <p class="instrucciones">Haz clic en un círculo para ver el nombre del color.</p>
+
+      <!-- Círculos de colores -->
+      <div class="learn-colors">
+        <div class="learn-circle amarillo" data-color="Amarillo"></div>
+        <div class="learn-circle azul" data-color="Azul"></div>
+        <div class="learn-circle rojo" data-color="Rojo"></div>
+        <div class="learn-circle verde" data-color="Verde"></div>
+        <div class="learn-circle blanco" data-color="Blanco"></div>
+        <div class="learn-circle naranja" data-color="Naranja"></div>
+        <div class="learn-circle morado" data-color="Morado"></div>
+        <div class="learn-circle rosa" data-color="Rosa"></div>
+        <div class="learn-circle celeste" data-color="Celeste"></div>
+        <div class="learn-circle gris" data-color="Gris"></div>
+      </div>
+
+      <!-- Nombre del color seleccionado -->
+      <p id="color-name" class="color-name">Nombre del color: </p>
+    </div>
+
+    <!-- Control de música -->
+    <div class="music-controls">
+      <i id="mute-btn" class="fas fa-volume-up"></i> <!-- Ícono de volumen -->
+      <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5"> <!-- Control de volumen -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
