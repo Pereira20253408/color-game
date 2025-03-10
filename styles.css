@@ -4,9 +4,15 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb); /* Degradado alegre */
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
   background-size: 300% 300%;
   animation: gradient-animation 10s ease infinite;
+  min-height: 100vh; /* Asegura que el fondo degradado cubra toda la pantalla */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Alinea el contenido al inicio para evitar centrado excesivo */
+  position: relative; /* Añadido para que .score-achievements se posicione relativo a body */
 }
 
 @keyframes gradient-animation {
@@ -28,6 +34,55 @@ body {
   background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  position: relative; /* Para posicionar los controles en la parte superior */
+}
+
+/* Controles en la parte superior derecha */
+.controls-top-right {
+  position: absolute;
+  top: 20px;
+  right: -65px; /* Moverlo más hacia afuera */
+  display: flex;
+  flex-direction: column; /* Cambiar a disposición vertical */
+  align-items: center;
+  gap: 5px;
+  background: transparent; /* Eliminar el fondo horizontal */
+  padding: 0; /* Eliminar el relleno innecesario */
+}
+
+/* Botón de silencio */
+.controls-top-right i {
+  font-size: 1.5rem; /* Agrandar el ícono */
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para el botón */
+  padding: 10px; /* Añadir un poco de espacio alrededor del ícono */
+  border-radius: 50%; /* Hacer el fondo circular */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Sombra para resaltar */
+}
+
+/* Fondo personalizado para el control de volumen */
+.controls-top-right .volume-wrapper {
+  background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+  padding: 5px; /* Espaciado interno */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Sombra para resaltar */
+  display: flex; /* Usar flexbox para alinear el control */
+  align-items: center; /* Centrar verticalmente */
+  justify-content: center; /* Centrar horizontalmente */
+  flex-direction: column; /* Alinear verticalmente el contenido */
+  width: 40px; /* Ancho del fondo */
+  height: 120px; /* Altura del fondo */
+}
+
+/* Control de volumen */
+.controls-top-right input[type="range"] {
+  width: 100px; /* Invertir ancho y alto */
+  height: 10px;
+  accent-color: #028174; /* Color del control deslizante */
+  transform: rotate(-90deg); /* Rotar el control para que sea vertical */
+  margin-top: 0; /* Eliminar margen innecesario */
+  /*writing-mode: bt-lr;  Eliminar writing-mode */
+  background: transparent; /* Eliminar el fondo predeterminado */
 }
 
 /* Pestañas */
@@ -154,13 +209,25 @@ body {
   border-radius: 50%;
   margin: 10px auto;
   background-color: gray;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  
+  /* Estilos para el nombre dentro del círculo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  font-weight: bold;
 }
 
 #resultado-nombre {
   font-size: 1.2rem;
-  color: #333;
+  /*color: #333;*/
+  color: white;
   margin-top: 10px;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 /* Círculos de aprendizaje */
@@ -231,4 +298,54 @@ body {
   font-size: 1.5rem;
   color: #333;
   margin-top: 20px;
+}
+
+/* Estilos para la puntuación */
+.score-wrapper {
+    position: absolute;
+    top: 165px;
+    left: 410px; /* Ajusta la posición según sea necesario */
+    background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Sombra para resaltar */
+    margin-bottom: 10px; /* Espacio entre la puntuación y los logros */
+}
+
+.score-wrapper .puntuacion {
+    font-size: 1rem;
+    color: #333;
+    margin: 0; /* Eliminar márgenes innecesarios */
+}
+
+/* Sección de Logros */
+.logros-lista {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.logros-lista li {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+/* Estilos para el mensaje emergente de logro */
+.logro-popup {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.logro-popup.show {
+  opacity: 1;
 }

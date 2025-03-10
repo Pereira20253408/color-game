@@ -10,6 +10,17 @@
 </head>
 <body>
   <div class="container">
+    <!-- Control de música y sonidos -->
+    <div class="controls-top-right">
+      <!-- Botón de silencio -->
+      <i id="mute-btn" class="fas fa-volume-up"></i> <!-- Ícono de volumen -->
+
+      <!-- Control de volumen para la música de fondo -->
+      <div class="volume-wrapper">
+        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5"> <!-- Control de volumen -->
+      </div>
+    </div>
+
     <!-- Pestañas -->
     <div class="tabs">
       <button class="tab-button active" data-tab="game">Juego de Mezcla</button>
@@ -36,9 +47,15 @@
       <!-- Resultado de la mezcla -->
       <div class="result">
         <h2>Resultado:</h2>
-        <div id="resultado-color" class="resultado-circle"></div>
-        <p id="resultado-nombre">Nombre del color: </p>
+        <div id="resultado-color" class="resultado-circle">
+          <span id="resultado-nombre"></span>
+        </div>
+        
       </div>
+      
+      <!-- Sección de Logros -->
+      <h2>Logros:</h2>
+      <ul id="logros" class="logros-lista"></ul>
     </div>
 
     <!-- Contenido de la pestaña "Aprender Colores" -->
@@ -63,14 +80,11 @@
       <!-- Nombre del color seleccionado -->
       <p id="color-name" class="color-name">Nombre del color: </p>
     </div>
-
-    <!-- Control de música -->
-    <div class="music-controls">
-      <i id="mute-btn" class="fas fa-volume-up"></i> <!-- Ícono de volumen -->
-      <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5"> <!-- Control de volumen -->
-    </div>
   </div>
-
+    <!-- Puntuación (fuera del contenedor principal) -->
+    <div class="score-wrapper">
+        <p id="puntuacion" class="puntuacion">Puntuación: 0</p>
+    </div>
   <script src="script.js"></script>
 </body>
 </html>
