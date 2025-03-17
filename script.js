@@ -17,6 +17,10 @@ const volumeSlider = document.getElementById('volume-slider');
 const mezclarBtn = document.getElementById('mezclar-btn'); // Referencia al botón de mezclar
 const puntuacionElement = document.getElementById('puntuacion'); // Referencia al elemento de puntuación
 const logrosLista = document.getElementById('logros'); // Referencia a la lista de logros
+<<<<<<< HEAD
+=======
+const logroPopup = document.getElementById('logro-popup'); // Referencia al popup
+>>>>>>> 6c16e2f (actualizacion de animacion y eliminacion del boton siguiente)
 
 let puntuacion = 0; // Inicializar la puntuación
 let isMuted = false; // Variable para controlar si la música de fondo está silenciada
@@ -118,6 +122,10 @@ function verificarLogros() {
     if (mezclasRealizadas >= logro.criterio && !logrosAlcanzados.includes(logro.id)) {
       logrosAlcanzados.push(logro.id);
       mostrarLogro(logro);
+<<<<<<< HEAD
+=======
+      mostrarLogroPopup(logro.nombre); // Mostrar el popup
+>>>>>>> 6c16e2f (actualizacion de animacion y eliminacion del boton siguiente)
       guardarLogros();
       console.log(`¡Logro desbloqueado: ${logro.nombre}!`); // Depuración
     }
@@ -131,6 +139,19 @@ function mostrarLogro(logro) {
   logrosLista.appendChild(li);
 }
 
+<<<<<<< HEAD
+=======
+// Función para mostrar el popup del logro
+function mostrarLogroPopup(nombreLogro) {
+  logroPopup.textContent = `¡Logro desbloqueado: ${nombreLogro}!`;
+  logroPopup.classList.add('show');
+
+  setTimeout(() => {
+    logroPopup.classList.remove('show');
+  }, 3000); // Ocultar después de 3 segundos
+}
+
+>>>>>>> 6c16e2f (actualizacion de animacion y eliminacion del boton siguiente)
 // Función para mezclar colores
 document.getElementById('mezclar-btn').addEventListener('click', () => {
   if (selectedColors.length < 2) {

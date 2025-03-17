@@ -1,18 +1,31 @@
 /* Estilos generales */
 body {
+<<<<<<< HEAD
   font-family: 'Comic Sans MS', cursive, sans-serif;
+=======
+  font-family: 'Comic Sans MS', sans-serif;
+>>>>>>> 6c16e2f (actualizacion de animacion y eliminacion del boton siguiente)
   text-align: center;
   margin: 0;
   padding: 0;
   background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
   background-size: 300% 300%;
   animation: gradient-animation 10s ease infinite;
+<<<<<<< HEAD
   min-height: 100vh; /* Asegura que el fondo degradado cubra toda la pantalla */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start; /* Alinea el contenido al inicio para evitar centrado excesivo */
   position: relative; /* Añadido para que .score-achievements se posicione relativo a body */
+=======
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+>>>>>>> 6c16e2f (actualizacion de animacion y eliminacion del boton siguiente)
 }
 
 @keyframes gradient-animation {
@@ -27,6 +40,7 @@ body {
   }
 }
 
+<<<<<<< HEAD
 .container {
   max-width: 600px;
   margin: 50px auto;
@@ -35,10 +49,43 @@ body {
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   position: relative; /* Para posicionar los controles en la parte superior */
+=======
+/* Contenedor principal */
+.container {
+  width: 90%; /* Ancho relativo al viewport */
+  max-width: 600px; /* Ancho máximo para pantallas grandes */
+  margin: 10px auto; /* Márgenes superior e inferior y centrado horizontal */
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: flex; /* Convertir en un contenedor flex */
+  flex-direction: column; /* Alinear los elementos verticalmente */
+  align-items: center; /* Centrar horizontalmente los elementos */
+}
+
+/* Encabezado con título e instrucciones */
+header {
+    margin-bottom: 20px; /* Espacio debajo del encabezado */
+}
+
+/* Contenedor para los controles */
+.controls-container {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end; /* Mover los controles a la derecha */
+    position: absolute; /* Sacarlos del flujo */
+    top: 50px; /* Posicionarlos arriba */
+    right: 0px; /* Posicionarlos a la derecha */
+    margin-top: 0; /* Eliminar el margen superior */
+    margin-right: 0; /* Eliminar el margen derecho */
+>>>>>>> 6c16e2f (actualizacion de animacion y eliminacion del boton siguiente)
 }
 
 /* Controles en la parte superior derecha */
 .controls-top-right {
+<<<<<<< HEAD
   position: absolute;
   top: 20px;
   right: -65px; /* Moverlo más hacia afuera */
@@ -48,20 +95,38 @@ body {
   gap: 5px;
   background: transparent; /* Eliminar el fondo horizontal */
   padding: 0; /* Eliminar el relleno innecesario */
+=======
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  background: transparent;
+  padding: 0;
+>>>>>>> 6c16e2f (actualizacion de animacion y eliminacion del boton siguiente)
 }
 
 /* Botón de silencio */
 .controls-top-right i {
+<<<<<<< HEAD
   font-size: 1.5rem; /* Agrandar el ícono */
   cursor: pointer;
   background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para el botón */
   padding: 10px; /* Añadir un poco de espacio alrededor del ícono */
   border-radius: 50%; /* Hacer el fondo circular */
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Sombra para resaltar */
+=======
+  font-size: 1rem;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+>>>>>>> 6c16e2f (actualizacion de animacion y eliminacion del boton siguiente)
 }
 
 /* Fondo personalizado para el control de volumen */
 .controls-top-right .volume-wrapper {
+<<<<<<< HEAD
   background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
   padding: 5px; /* Espaciado interno */
   border-radius: 15px; /* Bordes redondeados */
@@ -72,10 +137,23 @@ body {
   flex-direction: column; /* Alinear verticalmente el contenido */
   width: 40px; /* Ancho del fondo */
   height: 120px; /* Altura del fondo */
+=======
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 5px;
+  height: 100px;
+>>>>>>> 6c16e2f (actualizacion de animacion y eliminacion del boton siguiente)
 }
 
 /* Control de volumen */
 .controls-top-right input[type="range"] {
+<<<<<<< HEAD
   width: 100px; /* Invertir ancho y alto */
   height: 10px;
   accent-color: #028174; /* Color del control deslizante */
@@ -83,6 +161,14 @@ body {
   margin-top: 0; /* Eliminar margen innecesario */
   /*writing-mode: bt-lr;  Eliminar writing-mode */
   background: transparent; /* Eliminar el fondo predeterminado */
+=======
+  width: 100px;
+  height: 5px;
+  accent-color: #ff6f61;
+  transform: rotate(-90deg);
+  margin-top: 0;
+  background: transparent;
+>>>>>>> 6c16e2f (actualizacion de animacion y eliminacion del boton siguiente)
 }
 
 /* Pestañas */
@@ -94,7 +180,11 @@ body {
 }
 
 .tab-button {
+<<<<<<< HEAD
   background: linear-gradient(135deg, #ff6f61, #ff9a9e); /* Degradado alegre */
+=======
+  background: linear-gradient(135deg, #ff6f61, #ff9a9e);
+>>>>>>> 6c16e2f (actualizacion de animacion y eliminacion del boton siguiente)
   color: white;
   border: none;
   padding: 10px 20px;
@@ -122,8 +212,13 @@ body {
 .color-circles {
   display: flex;
   justify-content: center;
+<<<<<<< HEAD
   gap: 20px;
   margin: 20px 0;
+=======
+  gap: 15px;
+  margin: 30px 0;
+>>>>>>> 6c16e2f (actualizacion de animacion y eliminacion del boton siguiente)
 }
 
 .circle {
@@ -133,12 +228,20 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+<<<<<<< HEAD
   color: #fff;
+=======
+  color: #000000;
+>>>>>>> 6c16e2f (actualizacion de animacion y eliminacion del boton siguiente)
   font-weight: bold;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
+<<<<<<< HEAD
   border: 2px solid black; /* Borde negro para resaltar los círculos */
+=======
+  border: 2px solid black;
+>>>>>>> 6c16e2f (actualizacion de animacion y eliminacion del boton siguiente)
 }
 
 .circle:hover {
@@ -147,7 +250,10 @@ body {
 
 .amarillo {
   background-color: yellow;
+<<<<<<< HEAD
   color: black;
+=======
+>>>>>>> 6c16e2f (actualizacion de animacion y eliminacion del boton siguiente)
 }
 
 .azul {
@@ -164,18 +270,50 @@ body {
 
 .blanco {
   background-color: white;
+<<<<<<< HEAD
   color: black;
   border: 2px solid #ccc;
+=======
+  border: 2px solid #000000;
+}
+
+.naranja {
+  background-color: orange;
+}
+
+.morado {
+  background-color: purple;
+}
+
+.rosa {
+  background-color: pink;
+}
+
+.celeste {
+  background-color: #add8e6;
+}
+
+.gris {
+  background-color: gray;
+>>>>>>> 6c16e2f (actualizacion de animacion y eliminacion del boton siguiente)
 }
 
 /* Efecto de selección */
 .selected {
+<<<<<<< HEAD
   box-shadow: 0 0 10px 3px black; /* Anillo negro para resaltar */
+=======
+  box-shadow: 0 0 10px 3px black;
+>>>>>>> 6c16e2f (actualizacion de animacion y eliminacion del boton siguiente)
 }
 
 /* Botón de mezclar */
 .boton-mezclar {
+<<<<<<< HEAD
   background: linear-gradient(135deg, #ff6f61, #ff9a9e); /* Degradado alegre */
+=======
+  background: linear-gradient(135deg, #ff6f61, #ff9a9e);
+>>>>>>> 6c16e2f (actualizacion de animacion y eliminacion del boton siguiente)
   color: white;
   border: none;
   padding: 15px 30px;
@@ -183,9 +321,13 @@ body {
   font-weight: bold;
   border-radius: 50px;
   cursor: pointer;
+<<<<<<< HEAD
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-top: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+=======
+  transition: transform 0.3s ease, box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+>>>>>>> 6c16e2f (actualizacion de animacion y eliminacion del boton siguiente)
 }
 
 .boton-mezclar:hover {
@@ -209,20 +351,30 @@ body {
   border-radius: 50%;
   margin: 10px auto;
   background-color: gray;
+<<<<<<< HEAD
   
   /* Estilos para el nombre dentro del círculo */
   display: flex;
   align-items: center;
   justify-content: center;
   
+=======
+  display: flex;
+  align-items: center;
+  justify-content: center;
+>>>>>>> 6c16e2f (actualizacion de animacion y eliminacion del boton siguiente)
   font-weight: bold;
 }
 
 #resultado-nombre {
   font-size: 1.2rem;
+<<<<<<< HEAD
   /*color: #333;*/
   color: white;
   margin-top: 10px;
+=======
+  color: white;
+>>>>>>> 6c16e2f (actualizacion de animacion y eliminacion del boton siguiente)
     text-shadow:
     -1px -1px 0 #000,
     1px -1px 0 #000,
@@ -233,8 +385,13 @@ body {
 /* Círculos de aprendizaje */
 .learn-colors {
   display: grid;
+<<<<<<< HEAD
   grid-template-columns: repeat(5, 80px);
   grid-gap: 20px;
+=======
+  grid-template-columns: repeat(4, 20%);
+  grid-gap: 10px;
+>>>>>>> 6c16e2f (actualizacion de animacion y eliminacion del boton siguiente)
   justify-content: center;
   margin: 20px 0;
 }
@@ -245,7 +402,11 @@ body {
   border-radius: 50%;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+<<<<<<< HEAD
   border: 2px solid black; /* Borde negro para resaltar */
+=======
+  border: 2px solid black;
+>>>>>>> 6c16e2f (actualizacion de animacion y eliminacion del boton siguiente)
 }
 
 .learn-circle:hover {
@@ -300,6 +461,7 @@ body {
   margin-top: 20px;
 }
 
+<<<<<<< HEAD
 /* Estilos para la puntuación */
 .score-wrapper {
     position: absolute;
@@ -316,6 +478,28 @@ body {
     font-size: 1rem;
     color: #333;
     margin: 0; /* Eliminar márgenes innecesarios */
+=======
+/* Contenedor para la puntuación */
+.score-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start; /* Alinear a la izquierda */
+  margin-bottom: 10px; /* Espacio debajo de la puntuación */
+}
+
+/* Estilos para la puntuación */
+.score-wrapper {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.score-wrapper .puntuacion {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+>>>>>>> 6c16e2f (actualizacion de animacion y eliminacion del boton siguiente)
 }
 
 /* Sección de Logros */
@@ -348,4 +532,133 @@ body {
 
 .logro-popup.show {
   opacity: 1;
+<<<<<<< HEAD
+=======
+}
+
+/* Media Queries para diseño responsivo */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    /*header {
+        margin-top: 40px;  Espacio para el header 
+    }*/
+
+    .controls-container {
+        justify-content: flex-end; /* Alinea a la derecha */
+        position: absolute;  Sacarlos del flujo 
+        top: 10px;   Posicionarlos arriba 
+        right: 10px;  Posicionarlos a la derecha 
+        margin-top: 0; /* Eliminar el margen superior */
+        margin-right: 0; /* Eliminar el margen derecho */
+    }
+
+    .controls-top-right {
+        flex-direction: row; /* Alinear los controles en fila horizontal */
+        align-items: center; /* Centrar verticalmente */
+    }
+
+    .controls-top-right i,
+    .controls-top-right .volume-wrapper {
+        margin: 5px; /* Espacio entre los controles */
+    }
+
+    .score-container {
+        justifyContent: center; /* Centrar la puntuación */
+        margin-top: 10px;
+    }
+
+    .circle, .learn-circle {
+        width: 60px;
+        height: 60px;
+        font-size: 1rem;
+    }
+
+    .boton-mezclar {
+        font-size: 1.2rem;
+        padding: 10px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    /*header {
+        margin-top: 40px;  Espacio para el header 
+    }*/
+
+    .controls-container {
+        justify-content: flex-end; /* Alinea a la derecha */
+        position: absolute;  Sacarlos del flujo 
+        top: 10px;   Posicionarlos arriba 
+        right: 10px;  Posicionarlos a la derecha 
+        margin-top: 0; /* Eliminar el margen superior */
+        margin-right: 0; /* Eliminar el margen derecho */
+    }
+
+    .controls-top-right {
+        flex-direction: row; /* Alinear los controles en fila horizontal */
+        align-items: center; /* Centrar verticalmente */
+    }
+
+    .controls-top-right i,
+    .controls-top-right .volume-wrapper {
+        margin: 5px; /* Espacio entre los controles */
+    }
+
+    /* Ocultar el control de volumen en pantallas pequeñas */
+    .controls-top-right .volume-wrapper {
+        display: none;
+    }
+
+    .score-container {
+        justify-content: center; /* Centrar la puntuación */
+        margin-top: 10px;
+    }
+
+    .circle, .learn-circle {
+        width: 60px;
+        height: 60px;
+        font-size: 1rem;
+    }
+
+    .boton-mezclar {
+        font-size: 1rem;
+        padding: 8px 10px;
+    }
+}
+
+/* Botón de mezclar - Estilos específicos */
+.boton-mezclar {
+    background: linear-gradient(135deg, #ff6f61, #ff9a9e);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Resultado de la mezcla - Estilos específicos */
+.resultado-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px auto;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+>>>>>>> 6c16e2f (actualizacion de animacion y eliminacion del boton siguiente)
 }
